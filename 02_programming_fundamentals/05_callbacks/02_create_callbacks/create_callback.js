@@ -1,9 +1,11 @@
-const log = (text) => console.log(text);
+function log(text) {
+  console.log(text);
+}
 
 
 // A function that takes two parameters, this first one being an object like below
 // and the second one being a callback function.
-const getInput = (aUser, callback) => {
+const getInput = function(aUser, callback) {
   callback(aUser.key);
   // When finished, we want to log the key params...
 };

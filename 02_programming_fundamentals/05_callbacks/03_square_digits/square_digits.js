@@ -8,9 +8,40 @@
 // Note: The function accepts an integer and returns an integer
 
 function squareDigits(number) {
-  // Your code here
+  const numberToString = number.toString();
+  const myArray = numberToString.split("");
+  const myNewArray = [];
+  myArray.map( (element) => {
+    const squareNumber = element*element;
+    myNewArray.push(squareNumber);
+    return(myNewArray);
+  });
+  const result = parseInt(myNewArray.join(""),10);
+  return(result);
+
 }
+squareDigits(2345);
+
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
 module.exports = squareDigits;
+
+/*
+function squareDigits(number) {
+const numberString = number.toString();
+const digits =
+  numberString
+  .split("")
+  .map()(digitString) => parseInt(digitString, 10));
+  const digitsSquared = digits.map((digit) => digit * digit);
+  const digitsJoined = digitsSquared.join("");
+  return parseInt(digitsJoined, 10);
+}
+
+
+
+
+
+
+*/

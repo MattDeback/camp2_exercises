@@ -37,6 +37,8 @@ function pattern(size) {
   // Your code here
 }
 
+
+
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
 module.exports = pattern;
