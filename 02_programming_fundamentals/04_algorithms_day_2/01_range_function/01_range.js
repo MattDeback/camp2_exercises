@@ -4,9 +4,9 @@
 // This function should work in both ascending or descending order.
 
 // Complete this function.
-function range() {
-
-}
+function range(Matt,Marion) {
+console.log(hello ${Matt} and ${Marion}!)
+};
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
