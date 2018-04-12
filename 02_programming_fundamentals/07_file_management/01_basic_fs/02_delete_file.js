@@ -4,28 +4,21 @@
 // The function returns a boolean indicating if it successfully removed the file.
 
 const fs = require('fs');
-const path = require('path')
-const pathFile = "/Users/Matthieu/Workspace/camp2_exercises/02_programming_fundamentals/07_file_management/Matt.txt"
+const path = require('path');
 
 
-function deleteFile (path) {
-
+function deleteFile(path) {
   fs.unlink(path, error => {
-     (error) {
+    if (error) {
       console.warn(error);
-      return;
+      return; //return defensif!!
     }
-    console.log("File deleted!");
+    console.log("file is deleted");
   });
-
 }
 
-deleteFile(pathFile)
+const pathTest = "/Users/Matthieu/Workspace/camp2_exercises/02_programming_fundamentals/07_file_management/Matt.txt"
 
-}
+deleteFile(pathTest);
 
-function Isafile () {
-stats.isFile(pathFile)
-
-
-}
+module.exports = deleteFile
