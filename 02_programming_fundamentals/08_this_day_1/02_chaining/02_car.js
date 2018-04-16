@@ -14,20 +14,19 @@ const car = {
     return this;
   },
 
-  changeSpeed: function (newspeed) {
+  changeSpeed: function(newspeed) {
     this.speed = newspeed;
     return this;
   },
 
-  drive: function (travelTime) {
+  drive: function(travelTime) {
     this.time = travelTime;
     this.count += this.speed*(this.time / 60);
     return this;
   },
 
-  showDistance: function () {
-    console.log(this.count + " Km");
-  }
+  showDistance: function() {
+    console.log(`${this.count} Km`);
 
 
 };
@@ -38,9 +37,9 @@ const car = {
 // car.drive(42);
 // car.showDistance();
 
-car.start().changeSpeed(130).drive(45).showDistance();
+car.start().changeSpeed(150).drive(90).showDistance();
 
-console.log(car.showDistance());
+//excar.star().changeSpeed(160).drive(89).changeSpeed(167).drive(89).showDistance();
 
 
 

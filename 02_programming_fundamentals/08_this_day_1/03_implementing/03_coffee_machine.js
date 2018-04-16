@@ -1,5 +1,7 @@
 // See Sparta courses for the exercise summary
 
+//éviter arrow function avec this
+
 const machine = {
 
   litersOfCoffee: 0,
