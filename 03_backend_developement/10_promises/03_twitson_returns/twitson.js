@@ -1,5 +1,5 @@
 const OAuth = require("oauth");
-const request = require("request");
+const fetch = require("node-fetch");
 
 const oauth = new OAuth.OAuth(
   process.env.TWITTER_REQUEST_URL,
@@ -26,12 +26,20 @@ function twitson(twitterUsername) {
       const url = process.env.WATSON_URL;
       const auth = "Basic " + new Buffer(username + ":" + password).toString("base64");
       const uri = encodeURI(url + "/v1/analyze?version=2017-02-27&features=sentiment,emotion&language=en&text=" + texts);
-
-      request({ url: uri, headers: { "Authorization": auth } }, function (error, response, body) {
-        console.log(body);
-      });
+      //console.log(uri)
+      fetch(
+        uri,
+        {
+          headers: { "Authorization": auth }
+        })
+        .then(res => res.json())
+        .then(result => console.log(result));
     }
   );
 }
 
-twitson("neiltyson");
+twitson("neiltyson")
+  // .then(watsonResult => {
+  //   console.log("sentiments", watsonResult.sentiment);
+  //   console.log("emotions", watsonResult.emotion);
+  // });
