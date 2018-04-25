@@ -13,7 +13,7 @@ function simpleGet(Callback) {
   );
 }
 
-//simpleGet(myCallback);
+simpleGet(myCallback);
 
 
 
