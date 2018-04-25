@@ -8,4 +8,6 @@ function greet(name) {
   return `Hello ${greetingName.toUpperCase()}!`;
 }
 
+console.log(greet("MATT"));
+
 module.exports = greet;
