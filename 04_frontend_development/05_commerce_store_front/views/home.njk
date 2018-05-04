@@ -1,0 +1,37 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+
+<style media="screen">
+
+
+#categories tr:nth-child(even){background-color: #F8F8F8;}
+
+#categories tr:hover {background-color: #FFCCFF;}
+
+</style>
+
+<body>
+
+</br>
+
+<center><h1>Product categories</h1></center>
+
+
+<table class="table text-center" id="categories">
+  <ul>
+      <tr>
+  {% for element in myLabels %}
+</tr>
+            <td><a href="https://www.google.fr">
+          <li style="list-style-type: none;">{{element}}</li>
+      </td></a>
+  {% endfor %}
+  </ul>
+
+</table>
+
+</body>
+
+{% endblock content %}

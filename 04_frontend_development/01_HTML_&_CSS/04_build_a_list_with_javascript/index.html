@@ -27,7 +27,18 @@
     </div>
     <script src="./departments.js"></script>
     <script>
+
+    let dList = document.querySelector("#department-list");
+
+    let newList = DEPARTMENTS.map(department => ("<li>" + department + "</li>"));
+
+    let finalList = newList.join("")
+
+
+
+
       // Your code here
+      dList.innerHTML = finalList;
       // the departments are accessible in a global variable named DEPARTMENTS
     </script>
   </body>
