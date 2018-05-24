@@ -15,7 +15,7 @@ const oauth = new OAuth.OAuth(
 const url = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=";
 
 // Again, replace string by your credentials.
-oauth.get(url + "realDonaldTrump", process.env.TWITTER_ACCESS_TOKEN, process.env.TWITTER_ACCESS_SECRET, function (error, data) {
+oauth.get(url + "neiltyson", process.env.TWITTER_ACCESS_TOKEN, process.env.TWITTER_ACCESS_SECRET, function (error, data) {
   // Do something with data...
   if (error) {
     console.log(error);

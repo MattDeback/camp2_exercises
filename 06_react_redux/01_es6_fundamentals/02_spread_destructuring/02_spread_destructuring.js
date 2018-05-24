@@ -8,7 +8,7 @@
 // }
 //
 // go({ speed: 5 });
-
+//
 // function lastIndexOf(arr, elt, start=arr.length-1) {
 //   for (let i = start - 1; i >= 0; i--) {
 //     if (arr[i] === elt) {
@@ -20,7 +20,7 @@
 // }
 //
 // .lenght-1
-
+//
 // console.log(lastIndexOf([1, 2, 1, 2], 2));
 
 function replace(array, from, to, elements) {

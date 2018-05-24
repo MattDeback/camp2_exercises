@@ -1,4 +1,4 @@
-onst request = require("request");
+const request = require("request");
 const { Pool } = require ("pg");
 const pool = new Pool();
 const express = require("express");
